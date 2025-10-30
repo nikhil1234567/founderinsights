@@ -35,7 +35,7 @@ export default function ContactPage() {
       <div className="max-w-xl">
         <h1 className="font-serif text-3xl font-semibold">Thank you</h1>
         <p className="mt-3 text-neutral-700">Well get back to you shortly.</p>
-        <a href="mailto:info@founderinsightsinc.com" className="mt-6 inline-flex text-accent font-medium">Or email us directly → info@founderinsightsinc.com</a>
+        <a href="mailto:marion@founderinsightsinc.com" className="mt-6 inline-flex text-accent font-medium">Or email us directly → marion@founderinsightsinc.com</a>
       </div>
     )
   }
@@ -44,7 +44,7 @@ export default function ContactPage() {
     <div className="max-w-xl">
       <h1 className="font-serif text-3xl font-semibold">Contact</h1>
       <p className="mt-2 text-neutral-600">We'd love to learn about your team and goals.</p>
-      <a href="mailto:info@founderinsightsinc.com" className="mt-4 inline-flex text-accent font-medium">info@founderinsightsinc.com</a>
+      <a href="mailto:marion@founderinsightsinc.com" className="mt-4 inline-flex text-accent font-medium">marion@founderinsightsinc.com</a>
 
       <form onSubmit={onSubmit} className="mt-8 space-y-5">
         <div>
