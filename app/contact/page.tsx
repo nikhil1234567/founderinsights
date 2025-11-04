@@ -114,7 +114,7 @@ export default function ContactPage() {
         <div className="pt-2">
           <button
             type="submit"
-            className="inline-flex items-center rounded-md bg-accent px-5 py-2.5 text-white font-medium shadow-sm transition hover:bg-accent-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-accent disabled:opacity-60"
+            className="inline-flex items-center rounded-md bg-gradient-to-r from-accent to-accent-light px-5 py-2.5 text-white font-medium shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/30 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent disabled:opacity-60 disabled:hover:scale-100"
             disabled={submitting}
           >
             {submitting ? 'Sending…' : 'Send message'}

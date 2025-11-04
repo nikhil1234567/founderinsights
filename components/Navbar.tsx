@@ -49,7 +49,7 @@ export default function Navbar() {
           })}
           <Link
             href="/contact"
-            className="ml-2 inline-flex items-center rounded-md bg-accent px-3 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-accent-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            className="ml-2 inline-flex items-center rounded-md bg-gradient-to-r from-accent to-accent-light px-3 py-2 text-sm font-medium text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/30 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           >
             Let's Connect
           </Link>
@@ -74,7 +74,7 @@ export default function Navbar() {
             })}
             <Link
               href="/contact"
-              className="mt-2 inline-flex items-center justify-center rounded-md bg-accent px-3 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-accent-dark"
+              className="mt-2 inline-flex items-center justify-center rounded-md bg-gradient-to-r from-accent to-accent-light px-3 py-2 text-sm font-medium text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/30 hover:scale-105"
               onClick={() => setOpen(false)}
             >
               Let's Connect

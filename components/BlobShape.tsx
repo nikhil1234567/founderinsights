@@ -19,7 +19,7 @@ export default function BlobShape({ position = 'top-right', size = 'md' }: BlobS
 
   return (
     <div
-      className={`absolute ${positionClasses[position]} ${sizeClasses[size]} opacity-10 pointer-events-none`}
+      className={`absolute ${positionClasses[position]} ${sizeClasses[size]} opacity-10 pointer-events-none animate-floatSlow`}
       aria-hidden="true"
     >
       <svg viewBox="0 0 200 200" className="w-full h-full">
