@@ -22,7 +22,7 @@ export default function TagChips({
             className={`rounded-full border px-3 py-1 text-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
               selected
                 ? 'border-accent bg-accent text-white'
-                : 'border-neutral-200/70 bg-white text-neutral-700 hover:bg-neutral-50'
+                : 'border-blue-200/70 bg-white text-neutral-800 hover:bg-blue-50'
             }`}
             aria-pressed={selected}
           >

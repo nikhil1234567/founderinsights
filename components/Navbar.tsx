@@ -18,14 +18,14 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-neutral-200/70">
+    <header className="sticky top-0 z-50 bg-blue-50/90 backdrop-blur supports-[backdrop-filter]:bg-blue-50/70 border-b border-blue-100/70">
       <nav className="container-responsive flex items-center justify-between py-4">
         <Link href="/" className="font-serif text-xl font-semibold tracking-tight">
           Founder Insights
         </Link>
 
         <button
-          className="sm:hidden inline-flex items-center justify-center rounded-md p-2 text-neutral-700 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-accent"
+          className="sm:hidden inline-flex items-center justify-center rounded-md p-2 text-neutral-800 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-accent"
           aria-label="Toggle navigation"
           onClick={() => setOpen((v) => !v)}
         >
@@ -41,7 +41,7 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className={`text-sm transition-colors hover:text-accent ${active ? 'text-accent font-medium' : 'text-neutral-700'}`}
+                className={`text-sm transition-colors hover:text-accent ${active ? 'text-accent font-medium' : 'text-neutral-800'}`}
               >
                 {label}
               </Link>
@@ -57,7 +57,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="sm:hidden border-t border-neutral-200/70 bg-white">
+        <div className="sm:hidden border-t border-blue-100/70 bg-blue-50">
           <div className="container-responsive py-3 flex flex-col gap-2">
             {links.map(({ href, label }) => {
               const active = pathname === href
@@ -65,7 +65,7 @@ export default function Navbar() {
                 <Link
                   key={href}
                   href={href}
-                  className={`py-2 text-sm transition-colors hover:text-accent ${active ? 'text-accent font-medium' : 'text-neutral-700'}`}
+                  className={`py-2 text-sm transition-colors hover:text-accent ${active ? 'text-accent font-medium' : 'text-neutral-800'}`}
                   onClick={() => setOpen(false)}
                 >
                   {label}

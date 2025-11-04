@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from 'react'
+import BlobShape from '@/components/BlobShape'
+import DecorativeShape from '@/components/DecorativeShape'
 
 type Form = { name: string; email: string; organization: string; message: string }
 
@@ -35,15 +37,19 @@ export default function ContactPage() {
       <div className="max-w-xl">
         <h1 className="font-serif text-3xl font-semibold">Thank you</h1>
         <p className="mt-3 text-neutral-700">Well get back to you shortly.</p>
-        <a href="mailto:marion@founderinsightsinc.com" className="mt-6 inline-flex text-accent font-medium">Or email us directly → marion@founderinsightsinc.com</a>
+          <a href="mailto:marion@founderinsightsinc.com" className="mt-6 inline-flex text-accent font-medium">Or email us directly → marion@founderinsightsinc.com</a>
+          <DecorativeShape variant="arc" className="mt-8" />
+        </div>
       </div>
     )
   }
 
   return (
-    <div className="max-w-xl">
+    <div className="relative max-w-xl">
+      <BlobShape position="top-right" size="md" />
+      <div className="relative z-10">
       <h1 className="font-serif text-3xl font-semibold">Contact</h1>
-      <p className="mt-2 text-neutral-600">We'd love to learn about your team and goals.</p>
+      <p className="mt-2 text-neutral-700">We'd love to learn about your team and goals.</p>
       <a href="mailto:marion@founderinsightsinc.com" className="mt-4 inline-flex text-accent font-medium">marion@founderinsightsinc.com</a>
 
       <form onSubmit={onSubmit} className="mt-8 space-y-5">
@@ -54,7 +60,7 @@ export default function ContactPage() {
             type="text"
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className={`mt-1 block w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 ${errors.name ? 'border-red-400 focus:ring-red-300' : 'border-neutral-300 focus:ring-accent'}`}
+            className={`mt-1 block w-full rounded-md border bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 ${errors.name ? 'border-red-400 focus:ring-red-300' : 'border-blue-200 focus:ring-accent'}`}
             required
             aria-invalid={!!errors.name}
             aria-describedby={errors.name ? 'name-error' : undefined}
@@ -69,7 +75,7 @@ export default function ContactPage() {
             type="email"
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
-            className={`mt-1 block w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 ${errors.email ? 'border-red-400 focus:ring-red-300' : 'border-neutral-300 focus:ring-accent'}`}
+            className={`mt-1 block w-full rounded-md border bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 ${errors.email ? 'border-red-400 focus:ring-red-300' : 'border-blue-200 focus:ring-accent'}`}
             required
             aria-invalid={!!errors.email}
             aria-describedby={errors.email ? 'email-error' : undefined}
@@ -84,7 +90,7 @@ export default function ContactPage() {
             type="text"
             value={form.organization}
             onChange={(e) => setForm({ ...form, organization: e.target.value })}
-            className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+            className="mt-1 block w-full rounded-md border border-blue-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
           />
         </div>
 
@@ -95,7 +101,7 @@ export default function ContactPage() {
             rows={5}
             value={form.message}
             onChange={(e) => setForm({ ...form, message: e.target.value })}
-            className={`mt-1 block w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 ${errors.message ? 'border-red-400 focus:ring-red-300' : 'border-neutral-300 focus:ring-accent'}`}
+            className={`mt-1 block w-full rounded-md border bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 ${errors.message ? 'border-red-400 focus:ring-red-300' : 'border-blue-200 focus:ring-accent'}`}
             required
             aria-invalid={!!errors.message}
             aria-describedby={errors.message ? 'message-error' : undefined}
@@ -113,6 +119,8 @@ export default function ContactPage() {
           </button>
         </div>
       </form>
+      <DecorativeShape variant="dot-pattern" className="mt-8" />
+      </div>
     </div>
   )
 }

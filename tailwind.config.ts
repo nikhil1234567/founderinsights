@@ -13,6 +13,10 @@ const config: Config = {
           light: '#3B82F6', // blue-500
           dark: '#1D4ED8', // blue-700
         },
+        'soft-blue': {
+          DEFAULT: '#F0F4F8',
+          light: '#F8FAFC',
+        },
       },
       animation: {
         fadeIn: 'fadeIn 500ms ease-out',
