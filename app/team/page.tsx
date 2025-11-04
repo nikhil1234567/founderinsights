@@ -1,9 +1,11 @@
+import Image from 'next/image'
+
 const team = [
   {
     name: 'Marion Annau, JD, PhD',
     role: 'Chief Executive Officer',
     bio: 'Academic and entrepreneur specializing in constitutional law, technology, and democratic theory. Her research extends Rawlsian justice to protect freedom of speech and thought in the age of AI, proposing new safeguards for civic deliberation while maintaining free expression for commercial actors.',
-    image: '/team/marion.jpg',
+    image: '/team/Marion.jpg',
   },
   {
     name: 'Reza Satchu',
@@ -14,7 +16,7 @@ const team = [
   {
     name: 'Mandy Anger',
     role: 'Chief Financial Officer',
-    bio: 'Financial leader overseeing planning, controls, and operational excellence to support FI’s growth and partnerships.',
+    bio: 'Financial leader overseeing planning, controls, and operational excellence to support FI\'s growth and partnerships.',
     image: '/team/mandy.jpg',
   },
 ]
@@ -27,9 +29,15 @@ export default function TeamPage() {
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {team.map((m) => (
           <div key={m.name} className="rounded-lg border border-neutral-200/70 p-6">
-            <div className="h-40 w-full rounded-md bg-neutral-100 flex items-center justify-center text-neutral-400 text-sm">
-              {/* Placeholder for image */}
-              Photo
+            <div className="h-40 w-full rounded-md bg-neutral-100 overflow-hidden relative">
+              {m.image && (
+                <Image
+                  src={m.image}
+                  alt={m.name}
+                  fill
+                  className="object-cover"
+                />
+              )}
             </div>
             <h3 className="mt-4 font-medium">{m.name}</h3>
             <div className="text-sm text-neutral-600">{m.role}</div>
