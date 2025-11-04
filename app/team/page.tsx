@@ -29,15 +29,17 @@ export default function TeamPage() {
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {team.map((m) => (
           <div key={m.name} className="rounded-lg border border-neutral-200/70 p-6">
-            <div className="h-40 w-full rounded-md bg-neutral-100 overflow-hidden relative">
-              {m.image && (
-                <Image
-                  src={m.image}
-                  alt={m.name}
-                  fill
-                  className="object-cover"
-                />
-              )}
+            <div className="flex justify-center">
+              <div className="w-40 h-40 rounded-full bg-neutral-100 overflow-hidden relative">
+                {m.image && (
+                  <Image
+                    src={m.image}
+                    alt={m.name}
+                    fill
+                    className="object-contain"
+                  />
+                )}
+              </div>
             </div>
             <h3 className="mt-4 font-medium">{m.name}</h3>
             <div className="text-sm text-neutral-600">{m.role}</div>
