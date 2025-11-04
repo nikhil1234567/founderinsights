@@ -34,11 +34,13 @@ export default function ContactPage() {
 
   if (success) {
     return (
-      <div className="max-w-xl">
+      <div className="relative max-w-xl">
+        <BlobShape position="top-left" size="sm" />
+        <div className="relative z-10">
         <h1 className="font-serif text-3xl font-semibold">Thank you</h1>
         <p className="mt-3 text-neutral-700">Well get back to you shortly.</p>
           <a href="mailto:marion@founderinsightsinc.com" className="mt-6 inline-flex text-accent font-medium">Or email us directly → marion@founderinsightsinc.com</a>
-          <DecorativeShape variant="arc" className="mt-8" />
+        <DecorativeShape variant="arc" className="mt-8" />
         </div>
       </div>
     )
