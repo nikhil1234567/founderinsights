@@ -29,23 +29,23 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="relative py-8">
+    <div className="relative py-6 sm:py-8">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-transparent to-transparent -z-10" />
       <BlobShape position="top-left" size="lg" />
       <div className="relative z-10">
         <ScrollFadeIn>
-          <h1 className="font-serif text-3xl font-semibold">Services</h1>
-          <p className="mt-2 text-neutral-700 max-w-2xl">A platform to launch thought leaders and deliver high-signal learning across sectors.</p>
+          <h1 className="font-serif text-2xl sm:text-3xl font-semibold">Services</h1>
+          <p className="mt-2 text-sm sm:text-base text-neutral-700 max-w-2xl">A platform to launch thought leaders and deliver high-signal learning across sectors.</p>
         </ScrollFadeIn>
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {services.map((s, index) => (
             <ScrollFadeIn key={s.title} delay={index * 100}>
-              <div className="rounded-lg border border-blue-200/70 glass-strong p-6 transition-all hover:scale-105 hover:shadow-lg">
+              <div className="rounded-lg border border-blue-200/70 glass-strong p-4 sm:p-6 transition-all hover:scale-105 hover:shadow-lg active:scale-[0.98] touch-manipulation">
                 <ServiceIcon type={s.icon} className="w-6 h-6" />
-                <h3 className="font-medium text-lg text-neutral-800">{s.title}</h3>
-                <p className="mt-2 text-neutral-800 text-sm">{s.desc}</p>
-                <Link href="/contact" className="mt-4 inline-flex items-center text-accent font-medium transition-all hover:scale-105">Inquire →</Link>
+                <h3 className="font-medium text-base sm:text-lg text-neutral-800">{s.title}</h3>
+                <p className="mt-2 text-xs sm:text-sm text-neutral-800">{s.desc}</p>
+                <Link href="/contact" className="mt-4 inline-flex items-center text-accent font-medium transition-all active:scale-95 touch-manipulation min-h-[44px]">Inquire →</Link>
               </div>
             </ScrollFadeIn>
           ))}

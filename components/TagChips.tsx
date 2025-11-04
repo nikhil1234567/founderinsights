@@ -19,10 +19,10 @@ export default function TagChips({
             key={tag}
             type="button"
             onClick={() => onChange(tag)}
-            className={`rounded-full border px-3 py-1 text-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
+            className={`rounded-full border px-4 py-2 min-h-[44px] text-sm font-medium transition-all touch-manipulation focus:outline-none focus-visible:ring-2 focus-visible:ring-accent active:scale-95 ${
               selected
-                ? 'border-accent bg-accent text-white'
-                : 'border-blue-200/70 bg-white text-neutral-800 hover:bg-blue-50'
+                ? 'border-accent bg-accent text-white shadow-md'
+                : 'border-blue-200/70 bg-white text-neutral-800 active:bg-blue-50'
             }`}
             aria-pressed={selected}
           >

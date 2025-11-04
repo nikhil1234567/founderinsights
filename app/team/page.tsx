@@ -25,15 +25,15 @@ export default function TeamPage() {
       <BlobShape position="top-right" size="lg" />
       <div className="relative z-10">
         <ScrollFadeIn>
-          <h1 className="font-serif text-3xl font-semibold">Team</h1>
-          <p className="mt-2 text-neutral-700 max-w-2xl">A senior team combining academic rigor and entrepreneurial execution.</p>
+          <h1 className="font-serif text-2xl sm:text-3xl font-semibold">Team</h1>
+          <p className="mt-2 text-sm sm:text-base text-neutral-700 max-w-2xl">A senior team combining academic rigor and entrepreneurial execution.</p>
         </ScrollFadeIn>
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {team.map((m, index) => (
           <ScrollFadeIn key={m.name} delay={index * 150}>
-            <div className="rounded-lg border border-blue-200/70 glass-strong p-6 transition-all hover:scale-105 hover:shadow-lg">
-            <div className="flex justify-center">
-              <div className="w-40 h-40 rounded-full bg-blue-100 overflow-hidden relative">
+            <div className="rounded-lg border border-blue-200/70 glass-strong p-4 sm:p-6 transition-all hover:scale-105 hover:shadow-lg active:scale-[0.98] touch-manipulation">
+              <div className="flex justify-center">
+                <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-blue-100 overflow-hidden relative">
                 {m.image && (
                   <Image
                     src={m.image}
@@ -44,9 +44,9 @@ export default function TeamPage() {
                 )}
               </div>
             </div>
-            <h3 className="mt-4 font-medium text-neutral-800">{m.name}</h3>
-            <div className="text-sm text-neutral-700">{m.role}</div>
-              <p className="mt-2 text-sm text-neutral-800">{m.bio}</p>
+                <h3 className="mt-4 font-medium text-sm sm:text-base text-neutral-800">{m.name}</h3>
+                <div className="text-xs sm:text-sm text-neutral-700">{m.role}</div>
+                <p className="mt-2 text-xs sm:text-sm text-neutral-800">{m.bio}</p>
             </div>
           </ScrollFadeIn>
         ))}

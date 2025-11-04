@@ -5,7 +5,7 @@ export default function InsightCard({ insight }: { insight: Insight }) {
   return (
     <Link
       href={`/insights/${insight.slug}`}
-      className="group block rounded-lg border border-blue-200/70 glass-strong p-5 transition-all hover:shadow-lg hover:border-blue-300 hover:scale-105 hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+      className="group block rounded-lg border border-blue-200/70 glass-strong p-4 sm:p-5 transition-all hover:shadow-lg hover:border-blue-300 hover:scale-105 hover:-translate-y-1 active:scale-[0.98] active:shadow-md touch-manipulation focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
     >
       <div className="text-xs text-neutral-600 flex items-center gap-2">
         <span className="inline-flex items-center rounded-full bg-blue-100 px-2 py-0.5 text-neutral-800">

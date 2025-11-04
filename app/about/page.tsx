@@ -7,12 +7,12 @@ import ScrollFadeIn from '@/components/ScrollFadeIn'
 export default function AboutPage() {
   return (
     <div className="prose-content">
-      <div className="relative py-8">
+      <div className="relative py-6 sm:py-8">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-transparent to-transparent -z-10" />
         <BlobShape position="top-right" size="lg" />
         <ScrollFadeIn>
-          <h1 className="font-serif text-3xl sm:text-4xl font-semibold">About</h1>
-          <p className="mt-4 text-neutral-800 max-w-3xl">
+          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-semibold">About</h1>
+          <p className="mt-4 text-sm sm:text-base text-neutral-800 max-w-3xl">
             Founder Insights is a for-profit platform dedicated to monetizing sophisticated thought leadership at the intersection of entrepreneurship, AI, and society. Our purpose is to foster the founder mindset—psychological and strategic capabilities to start and grow ventures—while engaging the societal implications of artificial intelligence for young people, families, and future leaders.
           </p>
         </ScrollFadeIn>
@@ -21,7 +21,7 @@ export default function AboutPage() {
       <WavyDivider className="my-12" />
 
       <ScrollFadeIn>
-        <h2 className="mt-10 font-serif text-2xl font-semibold">What we do</h2>
+        <h2 className="mt-8 sm:mt-10 font-serif text-xl sm:text-2xl font-semibold">What we do</h2>
       </ScrollFadeIn>
       <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
         {[
@@ -31,10 +31,10 @@ export default function AboutPage() {
           { title: 'Educational Products', desc: 'Apps and tools that help teach modern skills and concepts.', icon: 'products' as const },
         ].map((v, index) => (
           <ScrollFadeIn key={v.title} delay={index * 100}>
-            <li className="rounded-lg border border-blue-200/70 glass-strong p-5 transition-all hover:scale-105 hover:shadow-lg">
+            <li className="rounded-lg border border-blue-200/70 glass-strong p-4 sm:p-5 transition-all hover:scale-105 hover:shadow-lg active:scale-[0.98] touch-manipulation">
               <ServiceIcon type={v.icon} className="w-6 h-6" />
-              <div className="font-medium text-neutral-800">{v.title}</div>
-              <div className="mt-1 text-neutral-800 text-sm">{v.desc}</div>
+              <div className="font-medium text-sm sm:text-base text-neutral-800">{v.title}</div>
+              <div className="mt-1 text-xs sm:text-sm text-neutral-800">{v.desc}</div>
             </li>
           </ScrollFadeIn>
         ))}
@@ -43,7 +43,7 @@ export default function AboutPage() {
       <DecorativeShape variant="arc" className="my-8" />
 
       <ScrollFadeIn>
-        <h2 className="mt-10 font-serif text-2xl font-semibold">Values</h2>
+        <h2 className="mt-8 sm:mt-10 font-serif text-xl sm:text-2xl font-semibold">Values</h2>
       </ScrollFadeIn>
       <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
         {[
@@ -53,9 +53,9 @@ export default function AboutPage() {
           { title: 'Collaboration & Clarity', desc: 'We work openly, ask precise questions, and seek shared understanding.' },
         ].map((v, index) => (
           <ScrollFadeIn key={v.title} delay={index * 100}>
-            <li className="rounded-lg border border-blue-200/70 glass-strong p-5 transition-all hover:scale-105 hover:shadow-lg">
-              <div className="font-medium text-neutral-800">{v.title}</div>
-              <div className="mt-1 text-neutral-800 text-sm">{v.desc}</div>
+            <li className="rounded-lg border border-blue-200/70 glass-strong p-4 sm:p-5 transition-all hover:scale-105 hover:shadow-lg active:scale-[0.98] touch-manipulation">
+              <div className="font-medium text-sm sm:text-base text-neutral-800">{v.title}</div>
+              <div className="mt-1 text-xs sm:text-sm text-neutral-800">{v.desc}</div>
             </li>
           </ScrollFadeIn>
         ))}

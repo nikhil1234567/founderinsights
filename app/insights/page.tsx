@@ -18,18 +18,18 @@ export default function InsightsPage() {
   }, [tag])
 
   return (
-    <div className="relative space-y-8">
+    <div className="relative space-y-6 sm:space-y-8">
       <BlobShape position="top-left" size="lg" />
       <div className="relative z-10">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
           <div>
-            <h1 className="font-serif text-3xl font-semibold">Insights</h1>
-            <p className="mt-2 text-neutral-700">Perspectives at the intersection of people, product, and narrative.</p>
+            <h1 className="font-serif text-2xl sm:text-3xl font-semibold">Insights</h1>
+            <p className="mt-2 text-sm sm:text-base text-neutral-700">Perspectives at the intersection of people, product, and narrative.</p>
           </div>
           <TagChips active={tag} onChange={setTag} />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-6 sm:mt-8">
           {filtered.map((i) => (
             <InsightCard key={i.slug} insight={i} />
           ))}
